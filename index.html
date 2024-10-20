@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفهرس</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+ 
+    <div class="container"> 
+        <h1 >الفهرس</h1>
+        <div class="btnHarket">
+            <button class="buttonmain"><a href='./src/Letters/Letters.html'> حروف الهجاء</a></button>
+            <button class="buttonmain"><a href='./src/Letters/Letters-with-Fatha.html'> الحروف بالفتح</a></button>
+            <button class="buttonmain"><a href='./src/Letters/Letters-with-Kasra.html'> الحروف بالكسر</a></button>
+            <button class="buttonmain"><a href='./src/Letters/Letters-with-dammah.html'> الحروف بالضم</a></button>
+            <button class="buttonmain"><a href='./src/Extending/Extending-with-Alif.html'> المد بالألف</a></button>
+            <button class="buttonmain"><a href='./src/Extending/Extension-with-ya.html'> المد بالياء</a></button>
+            <button class="buttonmain"><a href='./src/Extending/Extension-with-waw.html'> المد بالواو</a></button>
+            <button class="buttonmain"><a href='./src/tadrib/tadrib-kuran.html'>تدريبات قرآنية</a></button>
+            <label class="buttonmain" for="mad"> المد بسبب الهمزة</label>
+            <select class="buttonmain" name="mad" id="mad" onchange="navigateToPage()">
+                <option value="1- المد البدل" data-url='./src/mad/alternative-tide.html'>1- المد البدل</option>
+                <option value="2- المد المتصل" data-url='./src/mad/Continuous-tide.html'>2- المد المتصل</option>
+                <option value="3- المد المنفصل" data-url='./src/mad/separate-tide.html'>3- المد المنفصل</option>
+            </select>
+            <button class="buttonmain"><a href='./src/tadrib/tadrib-kuran2.html'>تدريبات قرآنية</a></button>
+            <button class="buttonmain"><a href='./src/Tanween/Tanween-with-Fatha.html'>التنوين بالفتح</a></button>
+            <button class="buttonmain"><a href='./src/Tanween/Tanween-with-kasra.html'>التنوين بالكسرة</a></button>
+            <button class="buttonmain"><a href='./src/Tanween/Tanween-with-Dammah.html'>التنوين بالضم</a></button>
+            <button class="buttonmain"><a href='./src/1/Stillness.html'> السكون</a></button>
+            <button class="buttonmain"><a href='./src/1/alkamriye.html'> لام قمرية</a></button>
+            <button class="buttonmain"><a href='./src/tadrib/Spelling-practice.html'>تدريب على التهجي وقفا</a></button>
+
+            <!--
+            <label class="buttonmain" for="tdribat"> تدريبات</label>
+            <select class="buttonmain" name="tdribat" id="tdribat">
+            <option value="تدريب على التهجي وقفا"> <a href='./src/'> تدريب على التهجي وقفا</a></option>
+            <option value="التشديد بالفتح والتشديد بالفتح مع المد بالألف"> <a href='./src/'> التشديد بالفتح والتشديد بالفتح مع المد بالألف</a></option>
+            <option value="كلمات التشديد بالفتح"> <a href='./src/'> كلمات التشديد بالفتح</a></option>
+            <option value="التشديد بالكسر والتشديد بالكسر مع المد بالياء"> <a href='./src/'> التشديد بالكسر والتشديد بالكسر مع المد بالياء</a></option>
+            <option value="كلمات التشديد بالكسر"> <a href='./src/'> كلمات التشديد بالكسر</a></option>
+            <option value=" التشديد بالضم والتشديد بالضم مع المد بالواو"> <a href='./src/'> التشديد بالضم والتشديد بالضم مع المد بالواو</a></option>
+            <option value="كلمات التشديد بالضم"> <a href='./src/'> كلمات التشديد بالضم</a></option>
+            </select> 
+             -->  
+            <button class="buttonmain" > <a href='./src/1/shadda-with-fatha.html'>التشديد بالفتح</a></button>
+            <button class="buttonmain" > <a href='./src/1/shadda-with-kasra.html'>التشديد بالكسر</a></button>
+            <button class="buttonmain" > <a href='./src/1/Letters-with-dammah.html'>التشديد بالضم</a></button>
+            <button class="buttonmain" > <a href='./src/1/alshamsia.html'> لام شمسية</a></button>
+            <button class="buttonmain" > <a href='./src/mad/necessary-tide.html'>المد اللازم</a></button>
+            <button class="buttonmain" > <a href='./src/tadrib/tadrib-kuran3.html'> تدربات قرانية</a></button>
+            <button class="buttonmain" > <a href='./src/1/Emphasis-with-tanween.html'> التشديد مع التنوين ( ً- ٍ- ٌ)</a></button>
+            <button class="buttonmain" > <a href='./src/1/subject-with-stressed-letter.html'> المشدد الموقوف عليه</a></button>
+            <button class="buttonmain" > <a href='./src/tadrib/Live-reading-exercises.html'> تدريبات للقراءة المباشرة</a></button>
+            <button class="buttonmain" > <a href='./src/Letters/hamza.html'>الهمزة</a></button>
+            <button class="buttonmain" > <a href='./src/1/Direct-reading-lyrics.html'> كلمات للقراءة المباشرة</a></button>
+            <button class="buttonmain" > <a href='./src/tadrib/tadrib-kuran4.html'> تدريبات قرانية</a></button>
+            </div>
+    </div>
+  
+    <script>
+        function navigateToPage() {
+            var selectElement = document.getElementById("mad");
+            var selectedOption = selectElement.options[selectElement.selectedIndex];
+            var url = selectedOption.getAttribute("data-url");
+            
+            if (url) {
+                window.location.href = url;
+            }
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+:root {
+    --bg-color-: #fff4da;
+    --ghose-: #f8afc7;
+    --pink-: #f03271;
+    --lime-: #99eebf;
+    --red-: #d34a32;
+    --purpel-: #9967d3;
+    --yellow-: #feee62;
+    --blue-: #2cb6e4;
+    --green-: #0e7a2c;
+    --dark-purpel-: #170d41;
+    --box-radius-: 20px 0 20px 0;
+    --fit-radius-: 20px;
+    --full-radius-: 50%;
+    --letter-radius: 10px;
+    --scale-: scale(1.1);
+}
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    color: var(--blue-); /* تم استخدام متغير اللون الأحمر */
+    direction: rtl;
+    background: var(--bg-color-); /* تم استخدام متغير لون الخلفية */
+    animation: gradientBG 10s ease infinite alternate;
+    padding-top: 50px;
+}
+
+.container {
+    display: block;
+}
+
+.buttonmain {
+    --bg: var(--ghose-); /* تم استخدام متغير لون */
+    --hover-bg: var(--green-); /* تم استخدام متغير لون */
+    --hover-text: var(--red-); /* تم استخدام متغير لون */
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    background: #d7ede1;
+    transition: 0.2s;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 10px 2px;
+    cursor: pointer;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttonmain:hover {
+    background: var(--lime-);
+    color: var(--yellow-);
+}
+
+h1 {
+    background-color: var(--bg); /* تم استخدام متغير لون */
+    border-radius: var(--letter-radius); /* تم استخدام متغير الزاوية */
+    height: 55px;
+    padding: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btnHarket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    color: var(--red-); /* تم استخدام متغير لون */
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+}

@@ -1,0 +1,1020 @@
+
+:root {
+
+    --bg-color-: #fff0d1;
+    /* example: background-color: var(--bg-color-); */
+    --ghose-: #f8afc7;
+    --pink-: #f03271;
+    --lime-: #99eebf;
+    --red-: #d34a32;
+    /* example: color: var(--red-); */
+    --purpel-: #9967d3;
+    --yellow-: #feee62;
+    --blue-: #2cb6e4;
+    --green-: #0e7a2c;
+    --dark-purpel-: #170d41;
+    --box-radius-: 20px 0 20px 0;
+    /* example: border-radius: var(--box-radius-); */
+    --fit-radius-: 20px;
+    --full-radius-: 50%;
+    --letter-radius: 10px;
+    /* المرجو استخدامها في جميع الأزرار في خاصية hover */
+    --scale-: scale(1.1);
+    /* example: transform: var(--scale-); */
+}
+
+span{
+    color: var(--red-);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
+
+
+body {
+    width: 100%;
+    background-color: var(--bg-color-);
+    overflow-x: hidden;
+}
+
+.letters-section {
+    padding: 10px 45px;
+    width: 100%;
+    height: fit-content;
+    background-color: #fff4da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px auto;
+}
+
+
+.titles {
+    display: flex;
+
+    & .title {
+        background-color: var(--red-) !important;
+        margin: 3px 23px;
+    }
+
+    margin-bottom: 30px;
+}
+
+.letters-section .title {
+    background-color: var(--red-);
+    display: inline-block;
+    height: 55px;
+    border-radius: var(--fit-radius-);
+    color: var(--yellow-);
+    align-content: center;
+    margin: 30px 15px;
+    font-size: 14px;
+
+    h1,
+    h2 {
+        padding: 0px 25px;
+    }
+}
+
+.letters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.letters .letter-button {
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: var(--fit-radius-);
+    border: 2px solid var(--green-);
+    margin: 10px 40px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+
+    span {
+        color: red;
+    }
+}
+
+.letters .letter-button:hover {
+    transform: var(--scale-);
+    box-shadow: 1px 1px 5px black;
+}
+
+
+
+
+
+
+.guide {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10px 0;
+}
+
+.colorGuide {
+    display: flex;
+    align-items: center;
+}
+
+.colorGuide span {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+}
+
+.colorGuide.yellow span {
+    background-color: var(--yellow-);
+}
+
+.colorGuide.blue span {
+    background-color: var(--blue-);
+}
+
+.colorGuide.yellowBlue span {
+    position: relative;
+}
+
+.colorGuide.yellowBlue span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 100%;
+    height: 50%;
+    background-color: var(--blue-);
+}
+
+.colorGuide.yellowBlue span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--yellow-);
+}
+
+.notes {
+    /* background-color: var(--bg-color-); */
+    padding: 10px;
+    /* border: 1px solid #5d657a; */
+    border-radius: 10px;
+    font-size: 25px;
+    width: 75%;
+    margin: 10px 0;
+    color: #0e2e2b;
+}
+
+ul {
+    list-style: none;
+}
+
+.notes ul li {
+    margin: 20px 0;
+}
+
+/*------------<h1>مجموعات الحروف بالكسر</h1>-----------------*/
+
+.groups {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.src2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.footer{
+    margin-top: 50px;
+}
+
+.src {
+    width: 70px;
+    height: 18px;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid orange;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-top: -17px;
+    font-size: 11px;
+    z-index: 2;
+}
+.group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    height: 225px;
+    border-radius: 15px;
+    position: relative;
+
+    .col {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 140px;
+        margin-top: 15px;
+
+        .letter-button {
+            margin: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: var(--blue-);
+            border-radius: var(--box-radius-);
+        }
+
+        .letter-button.top {
+            background-color: yellow;
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            margin-bottom: 5px;
+            border: 3px dotted green;
+            color: var(--red-);
+        }
+
+        .letter-button.bottom {
+            margin-top: 10px;
+            height: 80px;
+            width: 115px;
+        }
+
+        .letter-button:hover {
+            transform: var(--scale-);
+            box-shadow: 1px 1px 4px var(--dark-purpel-);
+        }
+    }
+}
+
+.group::before {
+    content: '';
+    width: 175px;
+    height: 35px;
+    position: absolute;
+    background-color: rgb(245, 235, 235);
+    top: -20px;
+    text-align: center;
+    align-content: center;
+    border-radius: var(--fit-radius-);
+    border: 2px solid var(--green-);
+    font-size: 26px;
+    color: var(--red-);
+}
+
+.group.group._1::before {
+    content: 'المجموعة 1';
+}
+
+.group.group._2::before {
+    content: 'المجموعة 2';
+}
+
+.group.group._3::before {
+    content: 'المجموعة 3';
+}
+
+.group.group._4::before {
+    content: 'المجموعة 4';
+}
+
+.group._1,
+.group._4 {
+    background-color: var(--green-);
+}
+
+.group._2 {
+    background-color: var(--ghose-);
+}
+
+.group._3 {
+    background-color: var(--yellow-);
+}
+
+.group._letters {
+    display: flex;
+}
+
+.group_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--red-);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/*----------------- page 17 ---------------*/
+
+
+
+/*--------------- Styling Page 17 ------------------*/
+
+
+
+/*------------<h1>مجموعات الحروف بالكسر</h1>-----------------*/
+
+
+.group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .word {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .letter-button {
+        margin: 15px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        /* box-shadow: 2px 1px var(--dark-purpel-) ; */
+    }
+
+    .letter-button:hover {
+        transform: var(--scale-);
+        box-shadow: 1px 1px 4px var(--dark-purpel-);
+    }
+
+    .l_1,
+    .l_2,
+    .l_3,
+    .l_4 {
+        position: relative;
+    }
+
+    .l_1::after,
+    .l_2::after,
+    .l_3::after,
+    .l_4::after {
+        content: '\21A2';
+        position: absolute;
+        left: -26px;
+        font-size: 32px !important;
+        font-weight: bold !important;
+        top: calc(50%-20px);
+        color: var(--red-);
+    }
+
+    .l_1::after,
+    .l_3::after {
+        color: var(--dark-purpel-);
+    }
+
+    .l_1,
+    .l_2,
+    .l_3,
+    .jomla {
+        /* border: 2px solid var(--dark-purpel-); */
+        box-shadow: 2px 1px var(--dark-purpel-);
+        outline: navy;
+    }
+
+    .l_1 {
+        background-color: var(--blue-);
+    }
+
+    .l_2 {
+        background-color: var(--ghose-);
+    }
+
+    .l_1,
+    .l_2 {
+        width: 80px;
+        height: 80px;
+        border-radius: var(--box-radius-);
+    }
+
+    .l_3 {
+        width: 160px;
+        height: 80px;
+        border-radius: var(--box-radius-);
+        background-color: var(--blue-);
+    }
+
+    .d {
+
+        background-color: var(--yellow-);
+        border-radius: 100%;
+        border: 2px dotted var(--green-);
+        height: 80px;
+        width: 80px;
+        position: relative;
+    }
+
+    .jomla {
+        width: 200px;
+        height: 80px;
+        border-radius: var(--box-radius-);
+        background-color: var(--blue-);
+    }
+
+    .word:nth-child(odd) {
+        i {
+            color: var(--dark-purpel-);
+        }
+    }
+
+    .l4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .l_4 {
+            border: 2px dotted var(--red-);
+        }
+    }
+
+    i {
+        font-size: 40px;
+        color: var(--red-);
+        font-weight: bold;
+        margin-right: -25px;
+    }
+}
+
+.group.examples {
+    display: flex;
+    flex-direction: column;
+}
+
+.group._1,
+.group._2 {
+    display: flex;
+    justify-content: center;
+    /* background-color: #c3d332; */
+    padding: 20px;
+}
+
+.group._letters {
+    display: flex;
+}
+
+.group_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--red-);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.group_title .square {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--green-);
+    text-align: center;
+    margin-right: 5px;
+    position: relative;
+    align-items: center;
+    align-content: center;
+}
+
+
+/*
+.group_title  {
+   border: 4px solid red;
+   width: 9px;
+   height: 43px;
+   transform: rotate(57deg);
+   margin-left: 15px;
+   border-radius: 25px;
+   background-color: red;
+ }
+ 
+ .group_title .square {
+   width: 40px;
+   height: 40px;
+   background-color: yellow;
+   transform: rotate(-63deg);
+   margin-top: 1px;
+   margin-left: -15px;
+   border-radius: 5px 20px;
+ }
+
+*/
+
+
+
+/*--------------- Styling Page 17 ------------------*/
+
+
+
+.letters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .exmple_ {
+        display: flex;
+    }
+
+    .exmple_.t_1,
+    .exmple_.t_2 {
+
+        .letter-button.l5 {
+            background-color: var(--ghose-);
+        }
+
+        .letter-button.l6 {
+            background-color: var(--green-);
+        }
+
+        .letter-button.l7 {
+            background-color: var(--blue-);
+        }
+    }
+
+    .exmple_.t_2 {
+
+        .letter-button.l5._5,
+        .letter-button.l6._6,
+        .letter-button.l7._7 {
+            width: 600px;
+        }
+
+        .letter-button.l5::after,
+        .letter-button.l6::after,
+        .letter-button.l7::after {
+            display: none;
+        }
+
+    }
+
+
+
+    .letter-button {
+        width: 190px;
+        height: 80px;
+        position: relative;
+        padding-bottom: 27px;
+    }
+ 
+
+    .letter-button.l1 {
+        background-color: var(--yellow-);
+    }
+
+    .letter-button.l2 {
+        background-color: var(--blue-);
+    }
+
+    .letter-button.l3 {
+        background-color: var(--green-);
+    }
+
+    .letter-button.l4 {
+        background-color: var(--yellow-);
+    }
+
+    .l11  { 
+        width: 390px;
+        background-color: var(--ghose-);
+    }
+    .l22{
+        width: 390px;
+        background-color: var(--yellow-);
+    }
+    .l22_{
+        width: 390px;
+        height: 155px;
+        background-color: var(--yellow-);
+    }
+}
+
+/* ------------   Page 18 --------------*/
+
+/*---------------- media query ----------------*/
+
+/*---------------- page 17 ----------------*/
+
+
+/*---------------- media query ----------------*/
+
+@media (min-width: 1205px) {
+    .groups {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1204px) {
+
+    .groups {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .letters {
+        .exmple_ {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .letters.tadrib2 .r-5,
+    .letters.tadrib2 .r-6,
+    .letters.tadrib2 .r-7{
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+@media (min-width: 460px) and (max-width: 768px) {
+
+    .letters-section {
+        padding: 10px 30px;
+    }
+
+    .letters-section .title {
+        font-size: 12px;
+        padding: 0px;
+
+    }
+
+    .guide {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .colorGuide span {
+        width: 15px;
+        height: 15px;
+        margin-left: 3px;
+    }
+
+    hr {
+        width: 90%;
+        border: 1px solid var(--red-);
+    }
+
+    .notes {
+        padding: 8px;
+        font-size: 15px;
+        width: 90%;
+        margin: 10px 0;
+        color: #0e2e2b;
+    }
+
+    .letters {
+        .exmple_ {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    .letters.tadrib2 .r-5,
+    .letters.tadrib2 .r-6,
+    .letters.tadrib2 .r-7{
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .letters-section {
+        padding: 10px;
+    }
+
+    .letters .letter-button:hover {
+        transform: var(--scale-);
+        box-shadow: 1px 1px 4px var(--dark-purpel-);
+    }
+
+    .letters-section .title {
+        font-size: 13px;
+        padding: 0px;
+    }
+
+    .letters {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+    }
+
+
+    .guide {
+        font-size: 8px;
+    }
+
+    .colorGuide span {
+        width: 10px;
+        height: 10px;
+    }
+
+    .notes {
+        padding: 8px;
+        font-size: 12px;
+        width: 90%;
+        color: #0e2e2b;
+    }
+
+
+
+    .group {
+        display: flex;
+    }
+
+    .title {
+        h1 {
+            font-size: 17px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+    }
+
+   
+}
+
+@media (max-width: 460px) {
+
+    .title {
+
+        h1,
+        h2 {
+            padding: 8px 15px;
+        }
+
+        h1 {
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 15px;
+        }
+    }
+
+    .group {
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .letters {
+        .exmple_ {
+            display: flex;
+      flex-direction: column;
+        }
+        .exmple_r-5,
+        .exmple_.r-6,
+        .exmple_.r-7 {
+            .letter-button {
+                width: 600px!important;
+            }
+        }
+    }  
+    .letters.tadrib1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.container {
+    margin: 20px ;
+    padding: 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Responsive columns */
+    grid-gap: 40px;
+    justify-items: center;
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    border: 2px solid var(--green-);
+    border-radius: 8px;
+}
+.box:hover{
+width: 61px;
+height: 61px;
+border: 2px solid var(--red-);
+
+}
+.hr1{
+    border: 1px solid var(--red-);
+margin-top: 10px;
+} 
+.hr2{
+    border: 1px solid var(--red-);
+margin-bottom: 10px;
+} 
+ ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right; 
+    font-size: 18px; 
+}
+
+@media (max-width: 600px) {
+    ul {
+        font-size: 9px; 
+    }
+}
+
+
+.yellow1 {
+    width: 20px;
+    height: 20px;
+    background-color: var(--yellow-);
+    margin-left: 3px;
+    color: var(--dark-purpel-);
+
+  }
+  .blue1 {
+    width: 20px;
+    height: 20px;
+    color: var(--dark-purpel-);
+
+    background-color: var(--blue-);
+    margin-left: 3px;
+  }
+  .pink1 {
+    width: 20px;
+    height: 20px;
+    background-color: var(--ghose-);
+    margin-left: 3px;
+    color: var(--dark-purpel-);
+
+  }
+  .green1 {
+    width: 20px;
+    color: var(--dark-purpel-);
+
+    height: 20px;
+    background-color: var(--lime-);
+    margin-left: 3px;
+  }
+.yellowBluw {
+    background: linear-gradient(45deg, var(--yellow-) 50%, var(--blue-) 50%);
+    color: #333;
+}
+.yellow {
+    background-color: var(--yellow-);
+}
+
+.blue {
+    background-color: var(--blue-);
+}
+
+.pink {
+    background-color: var(--ghose-);
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Smaller columns for small screens */
+    }
+
+    .box {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    .box:hover{
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); /* Even smaller columns for very small screens */
+    }
+
+    .box {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .box:hover{
+        width: 45px;
+        height: 45px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}
+.container .title {
+
+    background-color: var(--red-);
+    display: inline-block;
+    height: 45px;
+    border-radius: var(--fit-radius-);
+    color: var(--yellow-);
+    align-content: center;
+    margin: 30px 15px;
+    font-size: 14px;
+
+    h1,
+    h2 {
+        padding: 0px 25px;
+    }
+    .Column{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .Column_1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .Column_{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.Column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Column_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.Column_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
